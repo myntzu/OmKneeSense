@@ -1,0 +1,14 @@
+venv_mag/
+__pycache__/
+**/.*.sw[ponlmkj]
+*.py[cod]
+*$py.class
+*.o
+*.so
+*.so.dSYM
+checkpoints
+data
+logs
+
+.__afs*
+*DS_Store
