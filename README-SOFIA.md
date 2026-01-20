@@ -12,10 +12,11 @@
 ** REACTIVATE: *venv_mag should appear green in the explorer
 >>> .\venv_mag\Scripts\activate
 
-# 3. Run the following commands to install the library required 
+# 3. Run the following commands to install the libraries required *IMPORTANT*
 ** For AI to transform raw sensor RGB frames into localized force data
 >>> pip install tqdm
 >>> pip install configobj
+>>> pip install tensorflow tqdm configobj tf_slim opencv-python
 
 # 4. Run script to process frames
 >>> python main.py --phase run --config_file configs/o3f_hmhm2_bg_qnoise_mix4_nl_n_t_ds3.ini --vid_dir data/vids/knee_test --amplification_factor 10 --out_dir data/output/knee_magnified
