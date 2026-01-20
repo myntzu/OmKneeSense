@@ -19,6 +19,7 @@
 >>> pip install tensorflow tqdm configobj tf_slim opencv-python
 >>> pip install scipy 
 >>> pip install setproctitle
+>>> pip install opencv-python numpy
 
 # 4. Extract frames from sample video (.mp4 to .png)
 >>> python extract_frames.py --video_path data/vids/knee-vid.mp4 --out_dir data/vids/knee_test
@@ -29,3 +30,6 @@
 
 # Stitch magnified frames into video (optional*)
 >>> python stitch_vid.py
+
+# 6. Knee Tracking Data (force localization)
+>>> python track_knee.py
