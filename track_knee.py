@@ -4,8 +4,8 @@ import os
 import csv
 import glob
 
-image_folder = 'data/output/knee_magnified'
-output_csv = 'knee_tracking_data.csv'
+image_folder = 'data/output/knee_magnified_50'
+output_csv = 'knee_tracking50_data.csv'
 
 #old:
 # images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
@@ -23,7 +23,7 @@ for i, path in enumerate(images):
     
     # 1. Clean up noise (Thresholding)
     # Adjust '30' if it's too sensitive or not sensitive enough
-    _, thresh = cv2.threshold(gray, 30, 255, cv2.THRESH_BINARY)
+    _, thresh = cv2.threshold(gray, 50, 255, cv2.THRESH_BINARY)
     
     # 2. Find the "Center of Mass" (Moments)
     M = cv2.moments(thresh)
