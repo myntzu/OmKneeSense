@@ -14,6 +14,8 @@
 
 # 3. Run the following commands to install the libraries required *IMPORTANT*
 ** For AI to transform raw sensor RGB frames into localized force data
+>>>>> pip install -r requirements.txt
+** NOTE: run the commands below manually if ^ installation shows errors:
 >>> pip install tqdm
 >>> pip install configobj
 >>> pip install tensorflow tqdm configobj tf_slim opencv-python
