@@ -1,11 +1,9 @@
 import argparse
 import os
 import shutil
-# OLD CODE:
-#import tensorflow as tf
-#import setproctitle
 import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()           
+tf.compat.v1.disable_v2_behavior()  #new   
+import setproctitle
 from configobj import ConfigObj
 from validate import Validator
 from magnet import MagNet3Frames

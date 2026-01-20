@@ -1,7 +1,8 @@
 from __future__ import print_function
 
 import os
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import cv2
 import time
