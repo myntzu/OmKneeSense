@@ -75,10 +75,10 @@ def save_images(images, size, image_path):
 
 def imread(path, is_grayscale=True):
     if (is_grayscale):
-        return cv2.imread(path, flags=cv2.IMREAD_GRAYSCALE).astype(np.float)
+        return cv2.imread(path, flags=cv2.IMREAD_GRAYSCALE).astype(float) #update code
     else:
         img = cv2.imread(path, flags=cv2.IMREAD_COLOR)
-        return cv2.cvtColor(img, code=cv2.COLOR_BGR2RGB).astype(np.float)
+        return cv2.cvtColor(img, code=cv2.COLOR_BGR2RGB).astype(float)
 
 
 def merge_images(images, size):

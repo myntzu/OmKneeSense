@@ -2,7 +2,8 @@ import argparse
 import os
 import shutil
 import tensorflow.compat.v1 as tf
-tf.compat.v1.disable_v2_behavior()  #new       
+tf.compat.v1.disable_v2_behavior()  #new   
+import setproctitle
 from configobj import ConfigObj
 from validate import Validator
 from magnet import MagNet3Frames
