@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import os
 
-VIDEO_PATH = "videoInputProcess/knee-vid.mp4"
-OUTPUT_PATH = "videoInputProcess/knee-vid-corrected.mp4"
+VIDEO_PATH = "videoInputProcess/knee-vid-corrected.mp4"
+OUTPUT_PATH = "videoInputProcess/knee-vid-ACcorrected.mp4"
 
 # ==========================
 # MANUAL VALUES (KEEP THESE)
@@ -14,11 +14,13 @@ FY_SCALE = 0.9
 
 # Crop AFTER fisheye correction
 CROP = {
-    "LEFT": 700,
-    "RIGHT": 550,
+    "LEFT": 707,
+    "RIGHT": 557,
     "TOP": 600,
     "BOTTOM": 400
 }
+
+
 
 DEBUG_SINGLE_FRAME = False
 
