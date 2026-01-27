@@ -1,21 +1,37 @@
 import cv2
 import os
+import argparse
 
-# To extract video frames into PNG images for Frame Decomposition
-video_path = 'data/vids/knee-vid.mp4' # Path to the input video file
-output_folder = 'data/vids/knee_test'
+def extract_frames(video_path, out_dir):
+    if not os.path.exists(out_dir):
+        os.makedirs(out_dir)
 
-if not os.path.exists(output_folder):
-    os.makedirs(output_folder)
-
-vidcap = cv2.VideoCapture(video_path)
-success, image = vidcap.read()
-count = 0
-
-while success:
-    # Saves frames as 000001.png, 000002.png, etc.
-    cv2.imwrite(f"{output_folder}/{count:06d}.png", image)     
+    vidcap = cv2.VideoCapture(video_path)
     success, image = vidcap.read()
-    count += 1
+    count = 0
 
-print(f"Done! Extracted {count} frames to {output_folder}")
+    while success:
+        cv2.imwrite(os.path.join(out_dir, f"{count:06d}.png"), image)
+        success, image = vidcap.read()
+        count += 1
+
+    print(f"Done! Extracted {count} frames to {out_dir}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Extract frames from a video")
+    parser.add_argument(
+        "--video_path",
+        type=str,
+        required=True,
+        help="Path to input video file"
+    )
+    parser.add_argument(
+        "--out_dir",
+        type=str,
+        required=True,
+        help="Directory to save extracted frames"
+    )
+
+    args = parser.parse_args()
+
+    extract_frames(args.video_path, args.out_dir)
