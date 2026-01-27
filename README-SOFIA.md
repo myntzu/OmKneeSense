@@ -14,11 +14,14 @@
 
 # 3. Run the following commands to install the libraries required *IMPORTANT*
 ** For AI to transform raw sensor RGB frames into localized force data
+>>>>> pip install -r requirements.txt
+** NOTE: run the commands below manually if ^ installation shows errors:
 >>> pip install tqdm
 >>> pip install configobj
 >>> pip install tensorflow tqdm configobj tf_slim opencv-python
 >>> pip install scipy 
 >>> pip install setproctitle
+>>> pip install opencv-python numpy
 
 # 4. Extract frames from sample video (.mp4 to .png)
 >>> python extract_frames.py --video_path data/vids/knee-vid.mp4 --out_dir data/vids/knee_test
@@ -29,3 +32,6 @@
 
 # Stitch magnified frames into video (optional*)
 >>> python stitch_vid.py
+
+# 6. Knee Tracking Data (force localization)
+>>> python track_knee.py
