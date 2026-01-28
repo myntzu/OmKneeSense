@@ -2,8 +2,8 @@ import cv2
 import os
 
 # Path to magnified images (change as needed - e.g. filename)
-image_folder = 'data/output/knee_magnified_50'
-video_name = 'knee_sense_magnified_50.mp4'
+image_folder = 'data/output/knee_magnified_corrected'
+video_name = 'kneesense_mag_corrected.mp4'
 
 images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
 images.sort() # Ensure frames are in order (0001, 0002...)

@@ -4,14 +4,14 @@ import os
 import csv
 import glob
 
-image_folder = 'data/output/knee_magnified_50'
-output_csv = 'knee_tracking50_data.csv'
+image_folder = 'data/output/knee_magnified_corrected'
+output_csv = 'knee_magnified_data.csv'
 
 #old:
 # images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
 # images.sort()
 
-images = sorted(glob.glob('data/output/knee_magnified/*.png'))
+images = sorted(glob.glob('data/output/knee_magnified_corrected/*.png'))
 
 data_log = []
 

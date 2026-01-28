@@ -17,7 +17,7 @@ parser.add_argument('--config_file', dest='config_file', required=True,
 parser.add_argument('--config_spec', dest='config_spec',
                     default='configs/configspec.conf',
                     help='path to config spec file')
-# for inference
+# for inference2
 parser.add_argument('--vid_dir', dest='vid_dir', default=None,
                     help='Video folder to run the network on.')
 parser.add_argument('--frame_ext', dest='frame_ext', default='png',
